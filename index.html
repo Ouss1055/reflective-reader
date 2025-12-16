@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflective Reader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="app-header">
+    <div class="header-left">
+        <div class="app-title">القارئ الإلكتروني</div>
+    </div>
+    <div class="header-right">
+        <button id="bookmark-btn" class="icon-btn">☆</button>
+        <button id="back-btn" class="icon-btn">←</button>
+    </div>
+</header>
+
+<!-- Library Screen -->
+<main id="library-screen" class="screen">
+    <div class="library-content">
+        <div class="books-grid" id="books-container"></div>
+    </div>
+</main>
+
+<!-- Reader Screen -->
+<main id="reading-screen" class="screen">
+    <div class="reader-container">
+        <div class="page-area">
+            <div class="paper-texture"></div>
+            <div class="book-content">
+                <div class="page-content" id="page-content-area">
+                    <div class="book-header">
+                        <h2 id="book-title"></h2>
+                    </div>
+                    <div id="current-page"></div>
+                </div>
+            </div>
+            <div class="page-nav prev-page" id="prev-page">&#10094;</div>
+            <div class="page-nav next-page" id="next-page">&#10095;</div>
+        </div>
+    </div>
+</main>
+
+<!-- Controls (font, progress) -->
+<div style="padding:12px 20px; display:flex; gap:10px; align-items:center;">
+    <button id="font-size-down" class="secondary-btn">A-</button>
+    <div id="font-size-value">16</div>
+    <button id="font-size-up" class="secondary-btn">A+</button>
+</div>
+
+<!-- Bottom nav -->
+<nav class="bottom-nav">
+    <button class="nav-btn" data-screen="library">المكتبة</button>
+    <button class="nav-btn active" data-screen="reading">القراءة</button>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
